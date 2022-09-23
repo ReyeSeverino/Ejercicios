@@ -2,18 +2,18 @@ function validarFormulario(inputId) {
     var inputValue = document.getElementById(inputId).value;
 
     var error = "";
-    if (!inputValue) error = "este espacio no puede estar vacio";
+    if (!inputValue) error = "El compo de " + inputId + " no puede estar vacio";
 
     switch (inputId) {
         case 'usuario':
-            if (inputValue.length < 5)
+            if (inputValue.length >= 1 && inputValue.length < 5)
             {
                 error = "el nombre de usuario debe tener de 5 o mas caracteres";
             }
             break;
     
         case 'clave':
-            if (inputValue.length < 4)
+            if (inputValue.length >= 1 && inputValue.length < 4)
             {
                 error = "la contraseña es menor de 4 caracteres";
             }
