@@ -13,11 +13,12 @@
         <form onsubmit="return false;">
             <div>
             
-                <input type="gmail" id="correo" name="correo electrinico" required autocomplete="off" placeholder="correo electronico"/>
+                <input type="text" id="usuario" name="usuario" required autocomplete="off" placeholder="usuario" onchange="valueForm(usuario)"/>
+                <span id="errorUsuario"></span>
             </div>
             <div>
 
-                <input type="password" name="contraceña" required placeholder="cotraceña" id="clave" onkeyup="validarClave()"/>
+                <input type="password" name="clave" required placeholder="cotraceña" id="clave" onkeyup="valueForm(clave)"/>
                 <span id="errorClave"></span>
             </div>
             <div class="inline">
