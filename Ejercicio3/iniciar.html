@@ -12,14 +12,12 @@
         <h1>Inicio de sección</h1>
         <form onsubmit="return false;">
             <div>
-            
-                <input type="text" id="usuario" name="usuario" required autocomplete="off" placeholder="usuario" onchange="valueForm(usuario)"/>
-                <span id="errorUsuario"></span>
+                <input type="text" id="usuario" name="usuario" required autocomplete="off" placeholder="usuario" onchange="validarFormulario('usuario')"/>
+                <span id="usuarioSpan"></span>
             </div>
             <div>
-
-                <input type="password" name="clave" required placeholder="cotraceña" id="clave" onkeyup="valueForm(clave)"/>
-                <span id="errorClave"></span>
+                <input type="password" name="clave" required placeholder="cotraceña" id="clave" onchange="validarFormulario('clave')"/>
+                <span id="claveSpan"></span>
             </div>
             <div class="inline">
                 <input id="check" type="checkbox">

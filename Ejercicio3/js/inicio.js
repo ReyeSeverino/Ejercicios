@@ -1,32 +1,34 @@
-function valueForm(Inputid) {
-    var input = document.getElementById('Inputid').value;
-    // var clave = document.getElementById('clave').value;
+function validarFormulario(inputId) {
+    var inputValue = document.getElementById(inputId).value;
 
     var error = "";
-    var error2 ="";
+    if (!inputValue) error = "este espacio no puede estar vacio";
 
-    if (usuario.length < 5)
-    {
-        error = "el nombre de usuario debe tener de 5 o mas caracteres";
-
+    switch (inputId) {
+        case 'usuario':
+            if (inputValue.length < 5)
+            {
+                error = "el nombre de usuario debe tener de 5 o mas caracteres";
+            }
+            break;
+    
+        case 'clave':
+            if (inputValue.length < 4)
+            {
+                error = "la contraseña es menor de 4 caracteres";
+            }
+            else if(inputValue.length > 16)
+            {
+                error = "la contraseña es mayor de 16 caracteres";
+            };
+            break;
+        
+        default:
+            console.log('validarFormulario error: id no valido.')
+            break;
     }
-    else if (usuario.length === "")
-    {
-        error = "este espacio no puede estar vacio"
-    };
 
-    if (clave.length < 4)
-    {
-        error2 = "la contraseña es menor de 4 caracteres";
-    }
-    else if(clave.length > 16)
-    {
-        error2 = "la contraseña es mayor de 16 caracteres";
-    };
-    // poner validacion de que la clave tenga almenos un numero.
-
-    document.getElementById('errorUsuario').innerText = error;
-    document.getElementById('errorClave').innerText = error2;
+    document.getElementById(inputId + 'Span').innerText = error;
 };
 
 let inicioSecion = () => {
