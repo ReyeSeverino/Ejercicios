@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+<html>
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -19,6 +20,12 @@
                 <input type="password" name="clave" required placeholder="cotraceña" id="clave" onchange="validarFormulario('clave')"/>
                 <span id="claveSpan" class="error"></span>
             </div>
+
+            <div>
+                <input type="number" id="edad" name="edad" required autocomplete="off" placeholder="edad" onchange="validarFormulario('edad')"/>
+                <span id="edadSpan" class="error"></span>
+            </div>
+
             <div class="inline">
                 <input id="check" type="checkbox">
                 <label for="check">olvide la contraceña</label>

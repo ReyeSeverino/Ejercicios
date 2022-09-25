@@ -20,6 +20,12 @@ function validarFormulario(inputId) {
             };
             break;
 
+        case 'edad':
+            if (inputValue < 18 ) {
+                error = "no tiene la edad suficiente para este sitio web";
+            }
+            break;
+
         default:
             console.log('validarFormulario error: id no valido.')
             break;
@@ -34,7 +40,9 @@ function inicioSecion() {
 
     console.log(usuario, clave);
 }
-
+// se puesde usar en otros lodos de esta manera mara no llamarlo mucho  ponerle un return al final
 function $(selector) {
     return document.getElementById(selector);
 }
+// se puede usar tambien con una constante
+//const $ = (selector) => document.getElementById(selector).value;
