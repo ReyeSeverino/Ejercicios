@@ -4,40 +4,20 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ejercicio 4</title>
-    <link rel="stylesheet" href="./Css/inicio.css">
-    <link rel="shrotcut icon" type="image/x-icon" href="./Img/html-5.png">
     <script src="./js/inicio.js"></script>
 </head>
 <body>
     <div class="contenido">
-        <h1>Inicio de sección</h1>
-        <form onsubmit="return false;">
+        <h1>Encuentra el tesoro</h1>
+        
             <div>
-                <input type="text" id="usuario" name="usuario" required autocomplete="off" placeholder="usuario" onchange="validarFormulario('usuario')"/>
-                <span id="usuarioSpan" class="error"></span>
-            </div>
-            <div>
-                <input type="password" name="clave" required placeholder="cotraceña" id="clave" onchange="validarFormulario('clave')"/>
-                <span id="claveSpan" class="error"></span>
+                <input type="number" id="numero" placeholder="inrtroduce un numero" onchange="encuentraElTesoro('numero')"/>
+                <span id="errorSpan"></span>
             </div>
 
             <div>
-                <input type="number" id="edad" name="edad" required autocomplete="off" placeholder="edad" onchange="validarFormulario('edad')"/>
-                <span id="edadSpan" class="error"></span>
+                <button type="submit">iniciar</button>
             </div>
-
-            <div class="inline">
-                <input id="check" type="checkbox">
-                <label for="check">olvide la contraceña</label>
-            </div>
-            <div class="column">
-                <button id="primary" type="submit" onclick="inicioSecion()" >iniciar</button>
-                <button onclick="muestra_mensaje('me hicieron click')">Registrarte</button>
-            </div>
-        </form>
     </div>
-    <footer>
-        <img src="./Img/code-solid.svg">
-    </footer>   
 </body>
 </html>

@@ -1,48 +1,41 @@
-function validarFormulario(inputId) {
+function encuentraElTesoro(inputId) {
     var inputValue = $(inputId).value;
-
+    max = $(inputId).value;
+    min = 1;
     var error = "";
-    if (!inputValue) error = "El compo de " + inputId + " no puede estar vacio";
-
+    if (!inputValue) error = "Introduce un numero para iniciar el juego.";
+    
     switch (inputId) {
-        case 'usuario':
-            if (inputValue.length >= 1 && inputValue.length < 5) {
-                error = "el nombre de usuario debe tener de 5 o mas caracteres";
+        case 'numero':
+            if (inputValue.length <= 10) {
+                function numeroAlAzar (min, max){
+                    return Math.floor( Math.random() * (min-max + 1 ) + min);
+                    
+                }
+                console.log( numeroAlAzar(min, max));
             }
             break;
 
-        case 'clave':
-            if (inputValue.length >= 1 && inputValue.length < 4) {
-                error = "la contraseña es menor de 4 caracteres";
+        case 'numero':
+            if (inputValue.length > 10) {
+                error = "Debe ser un numero mayor de 10.";
             }
-            else if (inputValue.length > 16) {
-                error = "la contraseña es mayor de 16 caracteres";
-            };
             break;
 
-        case 'edad':
-            if (inputValue < 18 ) {
-                error = "no tiene la edad suficiente para este sitio web";
+        case 'numero':
+            if (inputValue.length === max) {
+                error = "Debe ser un numero mayor de 10.";
             }
             break;
 
         default:
-            console.log('validarFormulario error: id no valido.')
+            console.log('error: debes introducir un numero.')
             break;
     }
 
-    $(inputId + 'Span').innerText = error;
+    $(inputId + 'Span').innertext = error;
 };
 
-function inicioSecion() {
-    var usuario = $('usuario').value;
-    var clave = $('clave').value;
-
-    console.log(usuario, clave);
-}
-// se puesde usar en otros lodos de esta manera mara no llamarlo mucho  ponerle un return al final
 function $(selector) {
-    return document.getElementById(selector);
+     return document.getElementById(selector);
 }
-// se puede usar tambien con una constante
-//const $ = (selector) => document.getElementById(selector).value;
