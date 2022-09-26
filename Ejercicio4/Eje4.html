@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>eje4</title>
+    <script src="./Eje4.js"></script>
+    <link rel="stylesheet" href="./Eje4.css">
+</head>
+<body>
+    <div id="contenedor">
+        <div>
+            <p id="informacion">Has click para iniciar el juego</p>
+
+            <input type="number" id="numero" name="numero" placeholder="escribe un numero entre 10 a 1000" value="10" min="10" max="1000">
+
+            <p><span id="numeroSpan"></span></p>
+            <p id="intentos"></p>
+
+        </div>
+        <div>
+            <button name="iniciarJuego" id="botonJuego"  onclick="iniciarJuego()">iniciar el juego</button>
+        </div>
+    </div>
+</body>
+</html>

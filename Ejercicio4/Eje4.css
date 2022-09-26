@@ -1,0 +1,15 @@
+*{
+    font-size: 2rem;
+}
+
+input {
+    width: 80%;
+    margin: 0 2rem;
+}
+
+button{
+    background-color: lime;
+    color: white;
+    width: 80%;
+    margin: 0 2rem;
+}

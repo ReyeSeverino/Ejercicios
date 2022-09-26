@@ -1,7 +1,6 @@
 function encuentraElTesoro(inputId) {
     var inputValue = $(inputId).value;
-    max = $(inputId).value;
-    min = 1;
+   
     var error = "";
     if (!inputValue) error = "Introduce un numero para iniciar el juego.";
     
