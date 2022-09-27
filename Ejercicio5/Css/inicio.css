@@ -1,0 +1,102 @@
+body{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-image: url(../Img/R.jpg);
+    font-family: 'Courier New', Courier, monospace;
+}
+.contenido{
+    background: linear-gradient(90deg, rgb(8, 0, 159) 0%, rgba(10,10,150,0.8931623931623932) 43%, rgb(0, 163, 196) 100%);
+    box-shadow: 5px 5px 5PX black;
+    border-radius: 0 0 30PX 0;
+    display: inline-block;
+    position: absolute;
+    top: 50%;
+    left: 50%; /**rieght**/
+    transform: translate(-50%, -50%);
+    /* min-width: 22rem;
+    max-width: 23rem; */
+}
+.contenido form{
+    color: white;
+    margin: 2rem;
+    height: 55px 0;
+}
+.contenido h1{
+    text-align: center;
+    color: white;
+    margin: 2rem;
+    height: 55px 0;
+}
+.contenido form input{
+    width: 100%;
+    margin-top: 1rem;
+    height: 2rem;
+    font-size: 1.3rem;
+}
+.contenido form input:hover{
+    border-bottom: 0.2rem solid black;
+    cursor: text;
+}
+.contenido input::placeholder{
+    color: rgb(163,163,163);
+}
+.contenido form a{
+    font-size: 1.5rem;
+    text-decoration: none;
+    /* color: cyan; */
+    text-align: center;
+}
+.contenido form button{
+    position: relative;
+    padding: 0.5rem;
+}
+.column button{
+    width: 100%;
+    font-size: 1.3rem;
+    color: white;
+    background-color: rgb(77, 70, 70);
+    border-radius: 10px;
+}
+.contenido form button:hover{
+    border-bottom: 0.2rem solid rgb(0, 0, 0);
+    cursor: pointer;
+}
+footer img{
+    width: 50px;
+    height: 50px;
+    position: fixed;
+    bottom: 2rem;
+    right: 2rem;
+}
+footer img:hover{
+    cursor: pointer;
+}
+.inline{
+    margin: 1rem 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.contenido form .inline input{
+    height: 25px;
+    width: 25PX;
+    margin-top: unset;
+}
+label{
+    font-size: 1.2rem;
+    font-family: Arial, Helvetica, sans-serif;
+
+}
+.column{
+    display: grid;
+    gap: 10px;
+    justify-content: stretch;
+}
+#primary{
+    background-color: rgb(75, 166, 197);
+}
+@media(min-width: 380px){
+    
+
+}
