@@ -1,15 +1,57 @@
 *{
-    font-size: 2rem;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html{
+    font-size: 10px;
+    background-image: url(./img/fondo.png);
+}
+
+#contenedor{
+    background: linear-gradient(90deg, rgb(8, 0, 159) 0%, rgba(10,10,150,0.8931623931623932) 43%, rgb(0, 163, 196) 100%);
+    box-shadow: 5px 5px 5PX black;
+    border-radius: 30PX;
+    display: inline-block;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+p {
+    text-align: center;
+    color: white;
+    font-size: 2.5rem;
+    margin: 15px 0 0;
+    padding: 1rem 2rem;
+}
+
+div p #numeroSpan {
+    color: rgb(220, 110, 20);
+    text-shadow: 5px 5px 3PX black;
 }
 
 input {
-    width: 80%;
-    margin: 0 2rem;
+    position: relative;
+    width: 85%;
+    height: 4rem;
+    margin: 2.8rem 0 0 2.3rem;
+    padding: 0.6rem;
 }
 
 button{
-    background-color: lime;
+    position: relative;
+    background-color: rgb(255, 0, 106);
     color: white;
-    width: 80%;
-    margin: 0 2rem;
+    width: 85%;
+    height: 4rem;
+    padding: auto;
+    margin: 2.5rem;
+}
+
+
+.contenido input::placeholder{
+    color: rgb(163,163,163);
 }
