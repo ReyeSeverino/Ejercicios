@@ -5,9 +5,9 @@ let validarClave = () => {
     if (clave.length < 4)
     {
         error = "la contraseña es menor de 4 caracteres";
-    } 
+    }
     else if(clave.length > 16)
-    {    
+    {
         error = "la contraseña es mayor de 16 caracteres";
     };
     // poner validacion de que la clave tenga almenos un numero.
@@ -22,7 +22,7 @@ let inicioSecion = () => {
     console.log(correo, clave);
 }
 
-let muestra_mensaje = (mensaje) => { 
+let muestra_mensaje = (mensaje) => {
     // alert(mensaje);
     return mensaje;
 };

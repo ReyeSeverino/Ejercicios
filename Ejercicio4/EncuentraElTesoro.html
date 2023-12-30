@@ -31,17 +31,16 @@
             }
 
             ubicacionTesoro = generarNumeroAzar(minimo, maximo);
-        
+
             document.getElementById("botonJuego").onclick = encuentraTesoro;
-        
+
             document.getElementById("botonJuego").innerText = "encontrar tesoro";
 
             document.getElementById("informacion").innerHTML = 'El juego ha iniciado.';
-        
-            document.getElementById("intentos").innerText = 'Tienes ' + intentos + ' para  encontrar el tesoro!';
-        
 
-        };      
+            document.getElementById("intentos").innerText = 'Tienes ' + intentos + ' para  encontrar el tesoro!';
+
+        };
 
         function encuentraTesoro() {
             var inputId = "numero";
@@ -54,15 +53,15 @@
 
                 document.getElementById(inputId + 'Span').innerText = error;
                 return;
-            
+
             } else if (numValue < minimo) {
                 document.getElementById('numeroSpan').innerText = "El numero no puede ser menor que " + minimo;
                 return;
-            
+
             } else if (numValue > maximo) {
                 document.getElementById('numeroSpan').innerText = "El numero no puede ser mayor que " + maximo;
                 return;
-            
+
             } else {
                 document.getElementById('numeroSpan').innerText = "";
             }
@@ -80,12 +79,12 @@
             } else {
                 alert("has encontrado el tesoro!.");
                 document.getElementById('numeroSpan').innerText = "has encontrado el tesoro!.";
-            
+
                 document.getElementById("botonJuego").onclick = reiniciarJuego;
-            
+
                 document.getElementById("botonJuego").innerText = "reiniciar juego?";
                 return;
-            };  
+            };
 
             if (intentos!= 0){
                 document.getElementById('intentos').innerText = 'te quedan intentos '+ intentos+' de 10.';
@@ -95,16 +94,16 @@
                 alert ('haz agotado los intentos, el tesoro estaba en '+ubicacionTesoro);
 
                 document.getElementById("botonJuego").onclick = reiniciarJuego;
-            
+
                 document.getElementById("botonJuego").innerText = "reiniciar juego?";
             }
-        }       
+        }
 
         function modifyPlaceHolder(maximo) {
             let input = document.getElementById("numero");
-            
-            input.placeholder = " Escribe un nimero entre " +  minimo + " y " + maximo;
-        }       
+
+            input.placeholder = " Escribe un numero entre " +  minimoInicio + " y " + maximoInicio;
+        }
 
         function reiniciarJuego() {
             document.getElementById("numero").value = minimoInicio;
@@ -118,7 +117,7 @@
             document.getElementById("botonJuego").onclick = iniciarJuego;
 
             document.getElementById("botonJuego").innerText = "iniciar el juego";
-        }       
+        }
     </script>
     <style>
         *{
@@ -152,7 +151,7 @@
         }
 
         div p #numeroSpan {
-            color: rgb(220, 110, 20);
+            color: rgb(255, 255, 255);
             text-shadow: 5px 5px 3PX black;
         }
 
