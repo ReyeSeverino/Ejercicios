@@ -1,0 +1,84 @@
+body{
+    font-size: 32px;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    background-image: url(../Img/R.jpg);
+    font-family: 'Courier New', Courier, monospace;
+    height: 100vh;
+}
+.contenido{
+    background: gainsboro;
+    display: inline-block;
+    width: 540px;
+    margin: auto;
+    padding: 20px;
+}
+
+table{
+    width: 500px;
+    /* border: 2px solid black; */
+}
+
+#inputTarea{
+    font-size: 32px;
+    text-align: center;
+    width: 346px;
+    height: 45px;
+    background: #FFFFFF;
+}
+
+#agregarTarea{
+    font-size: 32px;
+    color: #FFFFFF;
+    width: 124px;
+    height: 51px;
+    background: #00A3FF;
+}
+#agregarTarea :hover{
+    font-size: 32px;
+    color: #FFFFFF;
+    width: 124px;
+    height: 51px;
+    background: #00A3FF;
+}
+
+.tareasP {
+    display: inline;
+    width: 331px;
+    height: 60px;
+    background: #FFDD85;
+    border-radius: 25px;
+    padding: 0;
+}
+
+.botonEliminar{
+    font-size: 32px;
+    color: #FFFFFF;
+    width: 124px;
+    background: #FF3B3B;
+    margin: 0;
+    border: 0px;
+    border-radius: 0px 25px 25px 0px;
+}
+
+#sinTareasSpan {
+     display: block; /*NONE */
+}
+
+footer img{
+    width: 50px;
+    height: 50px;
+    position: fixed;
+    bottom: 2rem;
+    right: 2rem;
+}
+
+footer img:hover{
+    cursor: pointer;
+}
+
+tr input {
+    width: 20px;
+    height: 20px;
+}

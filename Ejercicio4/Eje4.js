@@ -13,20 +13,16 @@ function iniciarJuego() {
     maximo = Number(document.getElementById("numero").value);
     intentos=10;
     document.getElementById("numero").value = "";
-
-    modifyPlaceHolder(maximo);
-
     if (maximo < minimoInicio || maximo > maximoInicio) {
-        document.getElementById('numeroSpan').innerText = "El numero no puede ser menor que " + minimoInicio + " o mayor que " + maximoInicio;
 
+        document.getElementById('numeroSpan').innerText = "El numero no puede ser menor que " + minimoInicio + " o mayor que " + maximoInicio;
         return;
     } else {
         document.getElementById('numeroSpan').innerText = "";
+        modifyPlaceHolder(maximo);
     }
 
     ubicacionTesoro = generarNumeroAzar(minimo, maximo);
-
-    // console.log('el numero al azar generado entre ' + minimo + ' y ' + maximo + ' es: ', ubicacionTesoro);
 
     document.getElementById("botonJuego").onclick = encuentraTesoro;
 
@@ -34,7 +30,7 @@ function iniciarJuego() {
 
     document.getElementById("informacion").innerHTML = 'El juego ha iniciado.';
 
-    document.getElementById("intentos").innerText = 'Tienes ' + intentos + ' para encontrar el tesoro!';
+    document.getElementById("intentos").innerText = 'Tienes ' + intentos + ' intentos para encontrar el tesoro!';
 
 };
 
@@ -45,7 +41,7 @@ function encuentraTesoro() {
     var error = "";
 
     if (!numValue) {
-        error = "El compo de " + inputId + " no puede estar vacio";
+        error = "El compo de " + inputId + " no puede estar vacio.";
 
         document.getElementById(inputId + 'Span').innerText = error;
         return;
@@ -66,15 +62,15 @@ function encuentraTesoro() {
 
     if(numValue > ubicacionTesoro) {
 
-        document.getElementById('numeroSpan').innerText = "te pasaste, el tesoro esta mas atras de ti.";
+        document.getElementById('numeroSpan').innerText = "Te pasaste, el tesoro esta mas atras de ti.";
 
     } else if (numValue < ubicacionTesoro) {
 
-        document.getElementById('numeroSpan').innerText = "aun te falta camino por recorrer.";
+        document.getElementById('numeroSpan').innerText = "Aun te falta camino por recorrer.";
 
     } else {
-        alert("has encontrado el tesoro!.");
-        document.getElementById('numeroSpan').innerText = "has encontrado el tesoro!.";
+        alert("Has encontrado el tesoro!.");
+        document.getElementById('numeroSpan').innerText = "Has encontrado el tesoro!";
 
         document.getElementById("botonJuego").onclick = reiniciarJuego;
 
@@ -83,11 +79,11 @@ function encuentraTesoro() {
     };
 
     if (intentos!= 0){
-        document.getElementById('intentos').innerText = 'te quedan intentos '+ intentos+' de 10.';
+        document.getElementById('intentos').innerText = 'Te quedan '+ intentos +' intentos de 10.';
     } else {
-        document.getElementById('intentos').innerText = 'has agotado tus intentos!';
+        document.getElementById('intentos').innerText = 'Has agotado tus intentos!';
 
-        alert ('haz agotado los intentos, el tesoro estaba en '+ubicacionTesoro);
+        alert ('Haz agotado los intentos, el tesoro estaba en el '+ubicacionTesoro);
 
         document.getElementById("botonJuego").onclick = reiniciarJuego;
 
@@ -97,14 +93,14 @@ function encuentraTesoro() {
 
 function modifyPlaceHolder(maximo) {
     let input = document.getElementById("numero");
-    // console.log(input);
+
     input.placeholder = " Escribe un nimero entre " +  minimoInicio + " y " + maximoInicio;
 }
 
 function reiniciarJuego() {
     document.getElementById("numero").value = minimoInicio;
 
-    document.getElementById("informacion").innerHTML = 'Has click para iniciar el juego';
+    document.getElementById("informacion").innerHTML = 'Has click para iniciar el juego.';
 
     document.getElementById('numeroSpan').innerText = "";
 
