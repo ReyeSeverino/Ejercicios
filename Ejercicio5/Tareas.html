@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tareas</title>
+    <link rel="stylesheet" href="./Css/Tareas.css">
+    <link rel="shrotcut icon" type="image/x-icon" href="./Img/miicono.ico">
+    <script type="module" src="./js/main.js"></script>
+</head>
+<body>
+    <div class="contenido">
+        <p><b>Tareas Pendientes</b></p>
+        
+        <input type="text" id="inputTarea" name="tarea" placeholder="Agregar una Tarea"/>
+        <button id="agregarTarea" type="submit" onclick="inicioSecion()"><b>+</b></button>
+        
+        <span id="sinTareasSpan">No tiene tarea pendientes</span>
+        
+        <table>
+            <tr>
+                <th><input type="checkbox" name="selectorMultiple"id="selectorMultiple"></th>
+                <th>Descripción</th>
+                <th>Acción</th>
+            </tr>
+            <tr>
+                <td colspan="3">
+                    <div class="tareasP">
+                        <input type="checkbox" name="marcarTarea" id="marcarTarea">
+                        <label for="marcarTarea"><b>Tarea numero 1</b></label>
+                        <button type="reset" class="botonEliminar">x</button>
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td colspan="3">
+                    <div class="tareasP">
+                        <input type="checkbox" name="marcarTarea" id="marcarTarea">
+                        <label for="marcarTarea"><b>Tarea numero 2</b></label>
+                        <button type="reset" class="botonEliminar">x</button>
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td colspan="3">
+                    <div class="tareasP">
+                        <input type="checkbox" name="marcarTarea" id="marcarTarea">
+                        <label for="marcarTarea"><b>Tarea numero 3</b></label>
+                        <button type="reset" class="botonEliminar">x</button>
+                    </div>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <footer>
+        <img src="./Img/miicono.ico">
+    </footer>   
+</body>
+</html>

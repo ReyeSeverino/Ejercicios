@@ -34,11 +34,11 @@
 
             document.getElementById("botonJuego").onclick = encuentraTesoro;
 
+
             document.getElementById("botonJuego").innerText = "encontrar tesoro";
 
             document.getElementById("informacion").innerHTML = 'El juego ha iniciado.';
-
-            document.getElementById("intentos").innerText = 'Tienes ' + intentos + ' para  encontrar el tesoro!';
+            document.getElementById("intentos").innerText = 'Tienes ' + intentos + ' intentos para encontrar el tesoro!';
 
         };
 
@@ -53,7 +53,6 @@
 
                 document.getElementById(inputId + 'Span').innerText = error;
                 return;
-
             } else if (numValue < minimo) {
                 document.getElementById('numeroSpan').innerText = "El numero no puede ser menor que " + minimo;
                 return;
